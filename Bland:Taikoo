@@ -1,0 +1,120 @@
+#include<cstdio>
+#include<iostream>
+#include<conio.h>
+#include<cstdlib>
+#include<windows.h>
+#include<fstream>
+#include<ctime>
+#include<cmath>
+#include<algorithm>
+#include<unistd.h>
+using namespace std;
+#define BLD_Ver 1.20
+void login();
+void system_moudle();
+struct Player
+{
+	int blood;
+	int water;
+	int food;
+	int wisdom;
+	int attack;
+	int defence;
+};
+
+ifstream fin;
+ofstream fout;
+
+char main_copymse[100][100]={"----------------------------",
+							"| Bland:Taikoo 2018  1.2   |",
+					  		"| GAME made by DLIC        |",
+					  		"| Do not copy              |",
+					  		"| @Copyright 2018 DLIC     |",
+					  		"----------------------------"};
+
+void system_moudle()
+{
+	cout<<"Hello Bland!"<<BLD_Ver<<" Core SYSTEM"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cout<<""; 
+	
+}
+/*void source_I()
+{
+	fout.open("L:\\Data\\GameData\\Blander__data.txt");
+	fout.open("L:\\Data\\GameData\\");
+	fout.close();
+}*///unfinished part
+void main_scr()
+{
+	int SYS_password,input_choose;
+	for(int i=0;i<=6;i++)
+	puts(main_copymse[i]);
+	
+	Sleep(2000);
+	system("cls");
+	
+	cout<<"o))))Bland:Taikoo "<<BLD_Ver<<"((((o"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cout<<"1.map 2.world 3.workbench"<<endl;
+	cout<<"4.furnace 5.enchant 6.anvil"<<endl;
+	cout<<"7.exit 8.dialog 9.mission"<<endl;
+	cout<<"10.System Moudle"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cin>>input_choose;
+	if(input_choose!=10)
+	else 
+	{
+		cout<<"------------SYSTEM-----------"<<endl;
+		cout<<"Please input system password:"<<endl;
+		cin>>SYS_password;
+		if(SYS_password==12345678)
+		cout<<"Pass"<<endl;
+		cout<<"Loding system moudle......"<<endl;
+		for(int chat_on=3;chat_on>=0;chat_on--)
+		{
+			if(chat_on!=0)
+			cout<<chat_on<<" ";
+			else cout<<chat_on<<endl;
+			system_moudle();
+			Sleep(1000);
+		}
+	}
+}
+void login()
+{
+	cout<<"----------------------"<<endl;
+	cout<<"| Bland:Taikoo "<<BLD_Ver<<" |"<<endl;
+	cout<<"----------------------"<<endl;
+	cout<<"Please login:"<<endl;
+	long long password;
+	unsigned char UserId;
+	cout<<"----------------"<<endl;
+	cout<<"Input userID"<<endl;
+	cin>>UserId;
+	cout<<"----------------"<<endl;
+	cout<<"Input password"<<endl;
+	cin>>password;
+	if(password==1977&&UserId=='G')
+	{
+		cout<<"login..."<<endl;
+		Sleep(700);
+		system("cls");
+		main_scr();
+	}
+	else if(password==2008&&UserId=='L')
+	{
+		cout<<"login..."<<endl;
+		Sleep(700);
+		system("cls");
+		main_scr();
+	}
+	else 
+	{
+		cout<<"Login Wrong"<<"|error ID:log/10506 Cannot find associated data"<<endl;
+		exit(0);
+	}
+}
+int main()
+{
+}
